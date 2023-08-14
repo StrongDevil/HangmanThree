@@ -12,21 +12,22 @@ public class Main {
     char starter;
     public static void main(String[] args) throws FileNotFoundException {
 
-        Logic logic=new Logic();
-        logic.paintesWords();
+
+
         Main main=new Main();
         main.startGame();
     }
     private void startGame() throws FileNotFoundException {
+        Logic logic=new Logic();
         while (true) {
-            System.out.println("бля начала игры введите 1");
-            System.out.println("оля коонца игры введите 2" +
+            System.out.println("для начала игры введите 1..");
+            System.out.println("а вот для коонца игры введите 2!" +
                     " ");
             starter = getLetter();
             checkIn(starter);
             if (starter == '1') {
                 System.out.println("game go");
-
+                logic.paintesWords();
             }
             if (starter == '2') {
                 System.out.println("game finish");
